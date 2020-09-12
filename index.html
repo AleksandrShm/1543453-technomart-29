@@ -9,7 +9,7 @@
       <h1>Магазин строительных материалов и инструментов ТЕХНОМАРТ</h1>
       <section>
         <a href="#" class="logo">
-          <img src="" alt="ТЕХНОМАРТ" width="108" height="18">
+          <img src="https://via.placeholder.com/108x18" alt="ТЕХНОМАРТ" width="108" height="18">
         </a>
         <input type="search" name="search" id="search-field">
         <a href="blank.html">Закладки</a>
@@ -38,25 +38,31 @@
     <main>
       <section>
         <h2>Каталог товаров</h2>
-        <div class="slider">
-          <h3>Перфораторы</h3>
-          <img src="https://via.placeholder.com/620x266" width="620" height="266" alt="Рабочий с перфоратором">
-          <p>Настоящие мужские игрушки</p>
-          <button type="button">Назад</button>
-          <button type="button" disabled>Вперед</button>
-          <div> <!--для слайдера, круглые точки внизу-->
-            <input type="radio" name="catalog-point" id="catalog-slide-1">
-            <label for="catalog-slide-1"></label>
-
-            <input type="radio" name="catalog-point" id="catalog-slide-2" checked>
-            <label for="catalog-slide-2"></label>
+          <div class="catalog-slider">
+            <input type="radio" id="catalog-slider-btn-1" name="cat-toggle" checked>
+            <input type="radio" id="catalog-slider-btn-2" name="cat-toggle">
+            <div class="catalog-slider-controls">
+              <label for="catalog-slider-btn-1"></label>
+              <label for="catalog-slider-btn-2"></label>
+            </div>
+            <button type="button" disabled>Назад</button>
+            <button type="button">Вперед</button>
+            <div class="catalog-slider-inner">
+              <div class="catalog-slider-slides">
+                <h3 class="catalog-slide-title-1">Перфораторы</h3>
+                <p class="catalog-slide-text-1">Настоящие мужские игрушки</p>
+                <img class="catalog-slide-img-1" src="https://via.placeholder.com/620x266" width="620" height="266" alt="Рабочий с перфоратором">
+                <a href="catalog.html">Открыть каталог</a>
+                <h3 class="catalog-slide-title-2">Дрели</h3>
+                <p class="catalog-slide-text-2">Соседям на радость!</p>
+                <img class="catalog-slide-img-2" src="https://via.placeholder.com/620x266" width="620" height="266" alt="Рабочий с дрелью">
+                <a href="blank.html">Открыть каталог</a>
+              </div>
+            </div>
           </div>
-          <a href="catalog.html">Открыть Каталог</a>
-        </div>
         <ul>
           <li>
             <h3>Материалы</h3>
-            <p>NEW</p>
             <a href="blank.html">На любой вкус</a>
           </li>
           <li>
@@ -83,30 +89,24 @@
         <ul>
           <li>
             <img src="https://via.placeholder.com/184x164" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
-            <br>
             <a href="blank.html">Перфоратор BOSCH BFG 9000</a>
             <p><del>32500 Р.</del></p>
             <a href="blank.html">25500 Р.</a>
           </li>
           <li>
-            <p>NEW</p>
             <img src="https://via.placeholder.com/127x112" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
-            <br>
             <a href="blank.html">Перфоратор BOSCH BFG 3000</a>
             <p><del>22500 Р.</del></p>
             <a href="blank.html">15500 Р.</a>
           </li>
           <li>
             <img src="https://via.placeholder.com/144x128" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
-            <br>
             <a href="blank.html">Перфоратор BOSCH BFG 6000</a>
             <p><del>30500 Р.</del></p>
             <a href="blank.html">25500 Р.</a>
           </li>
           <li>
-            <p>NEW</p>
             <img src="https://via.placeholder.com/127x112" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
-            <br>
             <a href="blank.html">Перфоратор BOSC HBFG 2000</a>
             <a href="blank.html">12500 Р.</a>
           </li>
@@ -145,27 +145,48 @@
         <h2>Сервисы</h2>
         <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-        <div>
-          <input type="radio" name="service-point" id="service-slide-1" checked>
-          <label for="service-slide-1">Доставка</label>
+        <div class="services-slider">
+          <input type="radio" id="services-slider-btn-1" name="serv-toggle" checked>
+          <input type="radio" id="services-slider-btn-2" name="serv-toggle">
+          <input type="radio" id="services-slider-btn-3" name="serv-toggle">
+          <div class="services-slider-controls">
+            <label for="services-slider-btn-1">Доставка</label>
+            <label for="services-slider-btn-2">Гарантия</label>
+            <label for="services-slider-btn-3">Кредит</label>
+          </div>
+          <div class="services-slider-inner">
+            <div class="services-slider-slides">
+              <div class="service-slide-1">
+                <h3>Доставка</h3>
+                <p>Мы с удовольствием доставим ваш товар прямо<br>
+                  к вашему подъезду совершенно бесплатно!<br>
+                  Ведь мы неплохо заработаем,<br>
+                  поднимая его на ваш этаж!</p>
+              </div>
+              <div class="service-slide-2">
+                <h3>Гарантия</h3>
+                <p>Какой то текст про гарантию <br>
+                  Какой то текст про гарантию <br>
+                  Какой то текст про гарантию <br>
+                  Какой то текст про гарантию</p>
+              </div>
+              <div class="service-slide-3">
+                <h3>Кредит</h3>
+                <p>Текст, призывающий взять кредит <br>
+                  Текст, призывающий взять кредит <br>
+                  Текст, призывающий взять кредит <br>
+                  Текст, призывающий взять кредит</p>
+              </div>
 
-          <input type="radio" name="service-point" id="service-slide-2">
-          <label for="service-slide-2">Гарантия</label>
-
-          <input type="radio" name="service-point" id="service-slide-3">
-          <label for="service-slide-3">Кредит</label>
+            </div>
+          </div>
         </div>
-        <h3>Доставка</h3>
-        <p>Мы с удовольствием доставим ваш товар прямо<br>
-          к вашему подъезду совершенно бесплатно!<br>
-          Ведь мы неплохо заработаем,<br>
-          поднимая его на ваш этаж!</p>
       </section>
       <section>
         <h2>О компании</h2>
         <h3>КОМПАНИЯ «Техномарт»</h3>
-        <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для <br>ремонта и строительства не оставит равнодушными любителей сэкономить на <br>гастарбайтерах.
-        <br>
+        <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для <br>ремонта и строительства не оставит равнодушными любителей сэкономить на <br>гастарбайтерах.</p>
+        <p>
         Мы можем доставить ваш товар в самые отдаленные точки России!<br>
         Техномарт работает со многими транспортными компаниями:</p>
         <ul>
@@ -184,7 +205,6 @@
         <p>Вы можете забрать товар сами,<br>
           заехав в наш офис:</p>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.598942412363!2d30.32089461559019!3d59.938796869048495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1599822734057!5m2!1sru!2sru" width="300" height="158" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-          <br>
           <a href="">Заблудились? Напишите нам!</a>
       </section>
     </main>
