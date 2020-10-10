@@ -115,29 +115,36 @@
         <div class="filter-catalog-products">
           <div class="products-filter">
             <p class="filter-title">Фильтр:</p>
-            <form class="filter" action="get" action="https://echo.htmlacademy.ru">
-              <fieldset>
+            <form class="filter" method="POST" action="https://echo.htmlacademy.ru">
+              <fieldset class="filter-fieldset">
                 <legend>Цена:</legend>
                 <div class="range-filter">
                   <div class="range-controls">
                     <div class="scale">
-                      <div class="bar"></div>
+                      <div class="bar" style="
+                        width: 85%;
+                        margin-left: 0%;
+                      "></div>
                     </div>
-                    <div class="toggle toggle-min" tabindex="0"></div>
-                    <div class="toggle toggle-max" tabindex="0"></div>
+                    <div class="toggle toggle-min" tabindex="0" style="
+                    left: 9%
+                    "></div>
+                    <div class="toggle toggle-max" tabindex="0" style="
+                      left: 73%;
+                    "></div>
                   </div>
                   <div class="price-controls">
                     <label class="min-price">
                        <input type="number" name="min-price" value=0>
                     </label>
-                    <span>&mdash;</span>
+                    <div>&mdash;</div>
                     <label class="max-price">
                        <input type="number" name="max-price" value="30000">
                     </label>
                   </div>
                 </div>
               </fieldset>
-              <fieldset>
+              <fieldset class="filter-fieldset">
                 <legend>Производители:</legend>
                 <ul class="filter-brands-list">
                   <li class="filter-brand-item">
@@ -162,15 +169,15 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset>
+              <fieldset class="filter-fieldset">
                 <legend>Питание:</legend>
                 <ul class="filter-power-list">
                   <li class="filter-power-item">
-                    <input class="filter-power-radio visually-hidden" type="radio" name="power-filter" id="accumulator-filter" checked>
+                    <input class="filter-power-radio visually-hidden" type="radio" name="power-filter" id="accumulator-filter" value="accumulator-filter" checked>
                     <label for="accumulator-filter">Аккумуляторные</label>
                   </li>
                   <li class="filter-power-item">
-                    <input class="filter-power-radio visually-hidden" type="radio" name="power-filter" id="electrical-outlet-filter">
+                    <input class="filter-power-radio visually-hidden" type="radio" name="power-filter" id="electrical-outlet-filter" value="electrical-outlet-filter">
                     <label for="electrical-outlet-filter">Сетевые</label>
                   </li>
                 </ul>
@@ -183,7 +190,7 @@
               <p class="products-sort-title">СОРТИРОВКА:</p>
               <ul class="products-sort-list">
                 <li class="products-sort-item">
-                  <a href="blank.html" class="products-sort-link products-sort-link-active">По цене</a>
+                  <a class="products-sort-link products-sort-link-active">По цене</a>
                 </li>
                 <li class="products-sort-item">
                   <a href="blank.html" class="products-sort-link">По типу</a>
@@ -194,7 +201,7 @@
               </ul>
               <ul class="products-sort-arrows">
                 <li class="products-sort-item">
-                  <a href="blank.html" class="sort-arrow-up sort-arrow-active"></a>
+                  <a class="sort-arrow-up sort-arrow-active"></a>
                 </li>
                 <li class="products-sort-item">
                   <a href="blank.html" class="sort-arrow-down"></a>
@@ -203,109 +210,109 @@
             </div>
             <ul class="catalog-products-list">
               <li class="product-item">
-                <div class="product-hover">
-                  <a href="blank.html" class="btn-green">Купить</a>
-                  <a href="blank.html" class="btn-green-border">В закладки</a>
-                </div>
                 <div class="product-image">
                   <img src="img/snippet-945.jpg" alt="Перфоратор BOSCH BFG 6000">
                 </div>
                 <a href="blank.html" class="product-link">Перфоратор BOSCH BFG 6000</a>
+                <div class="product-hover">
+                  <a href="blank.html" class="btn-green">Купить</a>
+                  <a href="blank.html" class="btn-green-border">В закладки</a>
+                </div>
                 <p class="product-old-price"><del>30500 Р.</del></p>
                 <p class="product-price">25500 Р.</p>
               </li>
               <li class="product-item">
-                <div class="product-hover">
-                  <a href="blank.html" class="btn-green">Купить</a>
-                  <a href="blank.html" class="btn-green-border">В закладки</a>
-                </div>
                 <div class="product-image">
                   <img src="img/snippet-945.jpg" alt="Перфоратор BOSCH BFG 6000">
                 </div>
                 <a href="blank.html" class="product-link">Перфоратор BOSCH BFG 6000</a>
-                <p class="product-old-price"><del>30500 Р.</del></p>
-                <p class="product-price">25500 Р.</p>
-              </li>
-              <li class="product-item new">
                 <div class="product-hover">
                   <a href="blank.html" class="btn-green">Купить</a>
                   <a href="blank.html" class="btn-green-border">В закладки</a>
                 </div>
+                <p class="product-old-price"><del>30500 Р.</del></p>
+                <p class="product-price">25500 Р.</p>
+              </li>
+              <li class="product-item new">
                 <div class="product-image">
                   <img src="img/snippet-945.jpg" alt="Перфоратор BOSCH BFG 6000">
                 </div>
                 <a href="blank.html" class="product-link">Перфоратор BOSCH BFG 6000</a>
-                <p class="product-old-price"><del>30500 Р.</del></p>
-                <p class="product-price">25500 Р.</p>
-              </li>
-              <li class="product-item new">
                 <div class="product-hover">
                   <a href="blank.html" class="btn-green">Купить</a>
                   <a href="blank.html" class="btn-green-border">В закладки</a>
                 </div>
+                <p class="product-old-price"><del>30500 Р.</del></p>
+                <p class="product-price">25500 Р.</p>
+              </li>
+              <li class="product-item new">
                 <div class="product-image">
                   <img src="img/snippet-18927.jpg" alt="Перфоратор BOSCH BFG 3000">
                 </div>
                 <a href="blank.html" class="product-link">Перфоратор BOSCH BFG 3000</a>
+                <div class="product-hover">
+                  <a href="blank.html" class="btn-green">Купить</a>
+                  <a href="blank.html" class="btn-green-border">В закладки</a>
+                </div>
                 <p class="product-old-price"><del>22500 Р.</del></p>
                 <p class="product-price">15500 Р.</p>
               </li>
               <li class="product-item">
-                <div class="product-hover">
-                  <a href="blank.html" class="btn-green">Купить</a>
-                  <a href="blank.html" class="btn-green-border">В закладки</a>
-                </div>
                 <div class="product-image">
                   <img src="img/snippet-945.jpg" alt="Перфоратор BOSCH BFG 6000">
                 </div>
                 <a href="blank.html" class="product-link">Перфоратор BOSCH BFG 6000</a>
-                <p class="product-old-price"><del>30500 Р.</del></p>
-                <p class="product-price">25500 Р.</p>
-              </li>
-              <li class="product-item new">
                 <div class="product-hover">
                   <a href="blank.html" class="btn-green">Купить</a>
                   <a href="blank.html" class="btn-green-border">В закладки</a>
                 </div>
+                <p class="product-old-price"><del>30500 Р.</del></p>
+                <p class="product-price">25500 Р.</p>
+              </li>
+              <li class="product-item new">
                 <div class="product-image">
                   <img src="img/snippet-18927.jpg" alt="Перфоратор BOSCH BFG 2000">
                 </div>
                 <a href="blank.html" class="product-link">Перфоратор BOSCH BFG 2000</a>
+                <div class="product-hover">
+                  <a href="blank.html" class="btn-green">Купить</a>
+                  <a href="blank.html" class="btn-green-border">В закладки</a>
+                </div>
                 <p class="product-price">12500 Р.</p>
               </li>
               <li class="product-item new">
-                <div class="product-hover">
-                  <a href="blank.html" class="btn-green">Купить</a>
-                  <a href="blank.html" class="btn-green-border">В закладки</a>
-                </div>
                 <div class="product-image">
                   <img src="img/snippet-18927.jpg" alt="Перфоратор BOSCH BFG 3000">
                 </div>
                 <a href="blank.html" class="product-link">Перфоратор BOSCH BFG 3000</a>
+                <div class="product-hover">
+                  <a href="blank.html" class="btn-green">Купить</a>
+                  <a href="blank.html" class="btn-green-border">В закладки</a>
+                </div>
                 <p class="product-old-price"><del>22500 Р.</del></p>
                 <p class="product-price">15500 Р.</p>
               </li>
               <li class="product-item">
-                <div class="product-hover">
-                  <a href="blank.html" class="btn-green">Купить</a>
-                  <a href="blank.html" class="btn-green-border">В закладки</a>
-                </div>
                 <div class="product-image">
                   <img src="img/snippet-945.jpg" alt="Перфоратор BOSCH BFG 6000">
                 </div>
                 <a href="blank.html" class="product-link">Перфоратор BOSCH BFG 6000</a>
-                <p class="product-old-price"><del>30500 Р.</del></p>
-                <p class="product-price">25500 Р.</p>
-              </li>
-              <li class="product-item new">
                 <div class="product-hover">
                   <a href="blank.html" class="btn-green">Купить</a>
                   <a href="blank.html" class="btn-green-border">В закладки</a>
                 </div>
+                <p class="product-old-price"><del>30500 Р.</del></p>
+                <p class="product-price">25500 Р.</p>
+              </li>
+              <li class="product-item new">
                 <div class="product-image">
                   <img src="img/snippet-18927.jpg" alt="Перфоратор BOSCH BFG 2000">
                 </div>
                 <a href="blank.html" class="product-link">Перфоратор BOSCH BFG 2000</a>
+                <div class="product-hover">
+                  <a href="blank.html" class="btn-green">Купить</a>
+                  <a href="blank.html" class="btn-green-border">В закладки</a>
+                </div>
                 <p class="product-price">12500 Р.</p>
               </li>
             </ul>
@@ -393,17 +400,17 @@
           Все права защищены</p>
         <ul class="footer-social-list">
           <li class="footer-social-item">
-            <a class="footer-social-link social-link-vk">
+            <a href="vk.com" class="footer-social-link social-link-vk">
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="footer-social-link social-link-fb">
+            <a href="facebook.com" class="footer-social-link social-link-fb">
               <span class="visually-hidden">Facebook</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="footer-social-link social-link-in">
+            <a href="instagram.com" class="footer-social-link social-link-in">
               <span class="visually-hidden">Instagram</span>
             </a>
           </li>
