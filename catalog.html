@@ -6,7 +6,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>HTML Academy: Техномарт</title>
 </head>
 
@@ -121,25 +121,18 @@
                 <div class="range-filter">
                   <div class="range-controls">
                     <div class="scale">
-                      <div class="bar" style="
-                        width: 85%;
-                        margin-left: 0%;
-                      "></div>
+                      <div class="bar"></div>
                     </div>
-                    <div class="toggle toggle-min" tabindex="0" style="
-                    left: 9%
-                    "></div>
-                    <div class="toggle toggle-max" tabindex="0" style="
-                      left: 73%;
-                    "></div>
+                    <div class="toggle toggle-min" tabindex="0"></div>
+                    <div class="toggle toggle-max" tabindex="0"></div>
                   </div>
                   <div class="price-controls">
                     <label class="min-price">
-                       <input type="number" name="min-price" value=0>
+                      <input type="number" name="min-price" value=0>
                     </label>
                     <div>&mdash;</div>
                     <label class="max-price">
-                       <input type="number" name="max-price" value="30000">
+                      <input type="number" name="max-price" value="30000">
                     </label>
                   </div>
                 </div>
@@ -148,23 +141,28 @@
                 <legend>Производители:</legend>
                 <ul class="filter-brands-list">
                   <li class="filter-brand-item">
-                    <input class="filter-brand-checkbox visually-hidden" type="checkbox" name="bosch" id="bosch-filter" checked>
+                    <input class="filter-brand-checkbox visually-hidden" type="checkbox" name="bosch" id="bosch-filter"
+                      checked>
                     <label for="bosch-filter">BOSCH</label>
                   </li>
                   <li class="filter-brand-item">
-                    <input class="filter-brand-checkbox visually-hidden" type="checkbox" name="interskol" id="interskol-filter">
+                    <input class="filter-brand-checkbox visually-hidden" type="checkbox" name="interskol"
+                      id="interskol-filter">
                     <label for="interskol-filter">ИНТЕРСКОЛ</label>
                   </li>
                   <li class="filter-brand-item">
-                    <input class="filter-brand-checkbox visually-hidden" type="checkbox" name="makita" id="makite-filter" checked>
+                    <input class="filter-brand-checkbox visually-hidden" type="checkbox" name="makita"
+                      id="makite-filter" checked>
                     <label for="makite-filter">MAKITA</label>
                   </li>
                   <li class="filter-brand-item">
-                    <input class="filter-brand-checkbox visually-hidden" type="checkbox" name="dewalt" id="dewalt-filter">
+                    <input class="filter-brand-checkbox visually-hidden" type="checkbox" name="dewalt"
+                      id="dewalt-filter">
                     <label for="dewalt-filter">DEWALT</label>
                   </li>
                   <li class="filter-brand-item">
-                    <input class="filter-brand-checkbox visually-hidden" type="checkbox" name="hitachi" id="hitachi-filter">
+                    <input class="filter-brand-checkbox visually-hidden" type="checkbox" name="hitachi"
+                      id="hitachi-filter">
                     <label for="hitachi-filter">HITACHI</label>
                   </li>
                 </ul>
@@ -173,11 +171,13 @@
                 <legend>Питание:</legend>
                 <ul class="filter-power-list">
                   <li class="filter-power-item">
-                    <input class="filter-power-radio visually-hidden" type="radio" name="power-filter" id="accumulator-filter" value="accumulator-filter" checked>
+                    <input class="filter-power-radio visually-hidden" type="radio" name="power-filter"
+                      id="accumulator-filter" value="accumulator-filter" checked>
                     <label for="accumulator-filter">Аккумуляторные</label>
                   </li>
                   <li class="filter-power-item">
-                    <input class="filter-power-radio visually-hidden" type="radio" name="power-filter" id="electrical-outlet-filter" value="electrical-outlet-filter">
+                    <input class="filter-power-radio visually-hidden" type="radio" name="power-filter"
+                      id="electrical-outlet-filter" value="electrical-outlet-filter">
                     <label for="electrical-outlet-filter">Сетевые</label>
                   </li>
                 </ul>
@@ -428,6 +428,22 @@
       </div>
     </div>
   </footer>
+
+  <div class="overlay-modal-cart">
+    <section class="modal modal-cart">
+      <div class="modal-cart-top">
+        <p class="modal-cart-text">Товар добавлен в корзину!</p>
+      </div>
+      <div class="modal-cart-bottom">
+        <a href="blank.html" class="modal-cart-order">Оформить заказ</a>
+        <button class="modal-cart-continue" type="button">Продолжить покупки</button>
+        <button class="modal-close btn-close-cart" type="button" aria-label="Закрыть"></button>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/cart.min.js"></script>
+
 </body>
 
 </html>

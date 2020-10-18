@@ -6,7 +6,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>HTML Academy: Техномарт</title>
 </head>
 
@@ -86,23 +86,23 @@
 
       <div class="catalog-slider">
         <ul class="catalog-slider-list">
-          <li class="catalog-slider-item slide-first">
+          <li class="catalog-slider-item">
             <h3 class="catalog-slider-title">Дрели</h3>
             <p class="catalog-slider-text">Соседям на радость!</p>
             <a href="blank.html" class="btn btn-catalog">Открыть каталог</a>
           </li>
-          <li class="catalog-slider-item slide slide-second slide-current">
+          <li class="catalog-slider-item slide-current">
             <h3 class="catalog-slider-title">Перфораторы</h3>
             <p class="catalog-slider-text">Настоящие мужские игрушки</p>
             <a href="catalog.html" class="btn btn-catalog">Открыть каталог</a>
           </li>
         </ul>
         <div class="slider-controls">
-          <button type="button" class="btn-slide-previous" aria-label="Предыдущий слайд" disabled></button>
-          <button type="button" class="btn-slide-next" aria-label="Следующий слайд"></button>
+          <button type="button" class="btn-slide-previous" aria-label="Предыдущий слайд"></button>
+          <button type="button" class="btn-slide-next" aria-label="Следующий слайд" disabled></button>
           <div class="pagination-slide">
             <button type="button" class="btn-slide-number" aria-label="Первый слайд"></button>
-            <button type="button" class="btn-slide-number btn-number-current" aria-label="Второй слайд"></button>
+            <button type="button" class="btn-slide-number btn-number-current" aria-label="Второй слайд" disabled></button>
           </div>
         </div>
       </div>
@@ -159,9 +159,7 @@
             <a href="blank.html" class="btn-green">Купить</a>
             <a href="blank.html" class="btn-green-border">В закладки</a>
           </div>
-          <p class="product-old-price">
-            <del">22500 Р.</del>
-          </p>
+          <p class="product-old-price"><del>22500 Р.</del></p>
           <p class="product-price">15500 Р.</p>
         </li>
         <li class="product-item">
@@ -245,20 +243,20 @@
 
         <div class="services-slider">
           <ul class="services-slider-list">
-            <li class="services-slider-item slide slide-current">
+            <li class="services-slider-item slide-current">
               <h3 class="services-slide-title">Доставка</h3>
               <p class="section-text">Мы с удовольствием доставим ваш товар прямо<br>
                 к вашему подъезду совершенно бесплатно!<br>
                 Ведь мы неплохо заработаем,<br>
                 поднимая его на ваш этаж!</p>
             </li>
-            <li class="services-slider-item slide">
+            <li class="services-slider-item">
               <h3 class="services-slide-title">Гарантия</h3>
               <p class="section-text">Если купленный у нас товар поломается или заискрит, <br>а также в случае пожара,
                 спровоцированного его <br>возгоранием, вы всегда можете быть уверены в нашей <br>гарантии. Мы обменяем
                 сгоревший товар на новый. <br>Дом уж восстановите как-нибудь сами.</p>
             </li>
-            <li class="services-slider-item slide">
+            <li class="services-slider-item">
               <h3 class="services-slide-title">Кредит</h3>
               <p class="section-text">Залезть в долговую яму стало проще! <br>Кредитные консультанты придут вам на
                 помощь.</p>
@@ -294,10 +292,11 @@
         <h3 class="section-title title-contacts">Контакты</h3>
         <p class="section-text text-contacts">Вы можете забрать товар сами,<br>
           заехав в наш офис:</p>
-        <iframe class="map-contacts"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.598942412363!2d30.32089461559019!3d59.938796869048495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1599822734057!5m2!1sru!2sru"
-          width="300" height="158" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-          tabindex="0"></iframe>
+        <div class="map-contacts">
+          <a href="https://goo.gl/maps/KPYHVis15rT5PWF48" class="map-link" target="blank">
+            <img src="img/map.png" width="300" height="158" alt="Наше расположение на карте">
+          </a>
+        </div>
         <a href="blank.html" class="btn btn-contacts">Заблудились? Напишите нам!</a>
       </section>
 
@@ -384,42 +383,62 @@
     </div>
   </footer>
 
-  <section class="modal modal-feedback">
-    <h2 class="visually-hidden">Форма обратной связи</h2>
-    <form class="feedback-form" action="https://echo.htmlacademy.ru" method="POST">
-      <div class="feedback-form-top">
-        <p>
-          <label for="feedback-name-input">Ваше имя:</label>
-          <input class="feedback-input" type="text" name="feedback-name" id="feedback-name-input"
-            placeholder="Имя Фамилия">
-        </p>
-        <p>
-          <label for="feedback-email-input">Ваш e-mail:</label>
-          <input class="feedback-input" type="email" name="feedback-email" id="feedback-email-input"
-            placeholder="email@example.com">
-        </p>
-        <p>
-          <label for="feedback-letter-textarea">Текст письма:</label>
-          <textarea class="feedback-letter" name="feedback-letter" id="feedback-letter-textarea" cols="80" rows="4"
-            placeholder="В свободной форме"></textarea>
-        </p>
-      </div>
+  <div class="overlay-modal-feedback">
+    <section class="modal modal-feedback">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="POST">
+        <div class="feedback-form-top">
+          <p>
+            <label for="feedback-name-input">Ваше имя:</label>
+            <input class="feedback-input" type="text" name="feedback-name" id="feedback-name-input"
+              placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <label for="feedback-email-input">Ваш e-mail:</label>
+            <input class="feedback-input" type="email" name="feedback-email" id="feedback-email-input"
+              placeholder="email@example.com">
+          </p>
+          <p>
+            <label for="feedback-letter-textarea">Текст письма:</label>
+            <textarea class="feedback-letter" name="feedback-letter" id="feedback-letter-textarea" cols="80" rows="4"
+              placeholder="В свободной форме"></textarea>
+          </p>
+        </div>
 
-      <div class="feedback-form-bottom">
-        <button class="modal-btn" type="submit">Отправить</button>
-      </div>
-    </form>
-    <button class="modal-close" type="button" aria-label="Закрыть"></button>
-  </section>
+        <div class="feedback-form-bottom">
+          <button class="modal-btn" type="submit">Отправить</button>
+        </div>
+      </form>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    </section>
+  </div>
 
-  <section class="modal modal-map">
-    <h2 class="visually-hidden">Как до нас добраться</h2>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
-      width="940" height="448" allowfullscreen
-      title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
-    <button class="modal-close btn-close-map" type="button" aria-label="Закрыть"></button>
-  </section>
+  <div class="overlay-modal-map">
+    <section class="modal modal-map">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+        width="940" height="448" allowfullscreen
+        title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+      <button class="modal-close btn-close-map" type="button" aria-label="Закрыть"></button>
+    </section>
+  </div>
+
+  <div class="overlay-modal-cart">
+    <section class="modal modal-cart">
+      <div class="modal-cart-top">
+        <p class="modal-cart-text">Товар добавлен в корзину!</p>
+      </div>
+      <div class="modal-cart-bottom">
+        <a href="blank.html" class="modal-cart-order">Оформить заказ</a>
+        <button class="modal-cart-continue" type="button">Продолжить покупки</button>
+        <button class="modal-close btn-close-cart" type="button" aria-label="Закрыть"></button>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/script.min.js"></script>
+  <script src="js/cart.min.js"></script>
 
 </body>
 
