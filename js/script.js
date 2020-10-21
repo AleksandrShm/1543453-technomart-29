@@ -94,7 +94,7 @@ for (let i = 0; i < serviceLinks.length; i++) {
     serviceSlides[i].classList.add("slide-current");
     serviceLinks[i].classList.add("services-current-btn");
     serviceLinks[i].disabled = true;
-    /*serviceLinks[i].blur();*/
+    serviceLinks[i].blur();
   });
 }
 
